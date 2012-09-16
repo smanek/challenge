@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import time
+import os
 from flask import Flask, render_template, make_response, request, redirect, session, url_for
 
 app = Flask(__name__)
@@ -75,5 +76,5 @@ def complete():
 
 
 if __name__ == '__main__':
-  port = int(os.environ.get('PORT', app.config['PORT'])
+  port = int(os.environ.get('PORT', app.config['PORT']))
   app.run(host='0.0.0.0', port=port)
