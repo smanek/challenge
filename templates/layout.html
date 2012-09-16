@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+  <title>The Signpost Challenge</title>
+  <style type="text/css">
+    #content {
+        position: relative;
+        left: 50px;
+    }
+ 
+    b {
+        font-weight: bold;
+    }
+
+    .error {
+        color: red;
+        padding-right: 10px;
+    }
+  </style>
+  {% block js %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='common.js') }}"></script>
+  {% endblock %}
+</head
+   <body>
+     <pre id="content">{% block content %}{% endblock %}</pre>
+   </body>

@@ -1,0 +1,11 @@
+Simple flask app for the Signpost challenge.
+
+Easy to deploy on a free server on Heroku. 
+
+If you don't know how to use virtualenv/etc, and just want to run it locally:
+1) install Flask ('easy_install flask' or similar)
+2) ./challenge.py
+3) visit http://localhost:8080 in a browser
+
+Level 1 answer is "twasTheNightBeforeChristmas"
+Level 2 answer is "772"

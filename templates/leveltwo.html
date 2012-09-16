@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<b>The Ransom</b>
+
+Glad you've made it this far, intrepid friend of Max. To tell you a little about 
+ourselves, our goal is to <a href="http://www.thepoint.com/campaigns/chicago-winter-dome">end winter in Chicago</a>.
+
+We've read our <a href="http://www.startuplessonslearned.com/">Ries</a> and plan to start small, with an <a href="http://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a>.
+
+We currently have the resources to build a structure covering any 5 adjacent city blocks.
+
+I.e., given the following blocks:
+
+a b c
+d e f
+g h i
+
+Block 'e' is adjacent to blocks 'b', 'f', 'h', and 'd'. While block 'c' is adjacent to 'b' and 'f'.
+
+<a href="{{ url_for('static', filename='density.txt') }}">Here</a> is a simplified population density map: each number represents the population of one block.
+
+Now we need your help - what's the max number of people we can we save from the tyranny of winter with our MVP dome?
+
+<form action="/leveltwo" method="post">
+  {% if badPass %}<label for="password" class="error">Wrong</label>{% endif %}<input type="text" name="password" id="password"></input>
+  <input type="submit" value="How many?"></input>
+</form>
+{% endblock %}

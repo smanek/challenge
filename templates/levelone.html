@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block js %}
+{{ super() }}
+<script src="{{ url_for('static', filename='levelone.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<b>The Note</b>
+
+Hello Signpost (or the help you've enlisted):
+
+As you've no doubt realized, we have Max the Mole.
+
+To ensure only the great engineers from Signpost read this message, we've hidden it behind a password protected page. 
+We've secretly sent the password to your browser - enter it below to read on how to save Max.
+
+<form action="/levelone" method="post">
+  {% if badPass %}<label for="password" class="error">Wrong password</label>{% endif %}<input type="text" name="password" id="password"></input>
+  <input type="submit" value="Got it?"></input>
+</form>
+
+<img src="{{ url_for('static', filename='max-ransom-pic.jpg') }}" alt="Max says to hurry" height="90" width="90"/>
+
+<!-- Not this obvious ... look deeper -->
+{% endblock %}
