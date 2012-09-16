@@ -75,4 +75,5 @@ def complete():
 
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0', port=app.config['PORT'])
+  port = int(os.environ.get('PORT', app.config['PORT'])
+  app.run(host='0.0.0.0', port=port)
